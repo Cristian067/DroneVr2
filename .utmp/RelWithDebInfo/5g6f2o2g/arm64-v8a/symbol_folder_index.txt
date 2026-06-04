@@ -1,0 +1,1 @@
+C:\Users\EVRV\Documents\Unity\DroneVr2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\5g6f2o2g\obj\arm64-v8a

@@ -1,0 +1,2 @@
+C:\Users\EVRV\Documents\Unity\DroneVr2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\EVRV\Documents\Unity\DroneVr2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
