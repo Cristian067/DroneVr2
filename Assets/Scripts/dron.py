@@ -25,9 +25,12 @@ tello = Tello()
 tello.connect()
 tello.streamon()
 
+video = True
 # Socket per rebre ordres de Unity
 cmd_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 cmd_socket.bind(("0.0.0.0", UDP_RECEIVE_PORT))
+
+print(f"Battery:{tello.get_battery()}%")
 
 # Socket per enviar vídeo a Unity
 video_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -39,6 +42,12 @@ def escoltar_unity():
             data, _ = cmd_socket.recvfrom(1024)
             command = data.decode("utf-8").strip()
             print(f"[UNITY] Ordre rebuda: {command}")
+
+            if command.startswith("video"):
+                _, ipV = command.split()
+                UNITY_IP = ipV
+                video = True
+                continue  # No és una comanda de control, només una notificació
             
             # Mapeig d'ordres bàsiques al Tello
             if command == "takeoff": tello.takeoff()
@@ -60,28 +69,30 @@ frame_read = tello.get_frame_read()
 
 while True:
     try:
-        frame = frame_read.frame
-        if frame is not None:
-            
-            # 1. CORRECCIÓ DE COLOR: Convertim de BGR (OpenCV) a RGB (Unity)
-            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            
-            # 2. MILLORA DE NITIDESA: Pugem a 640x480 fent servir INTER_AREA para evitar que es vegi borrós
-            frame_resized = cv2.resize(frame_rgb, (320, 240), interpolation=cv2.INTER_AREA)
-            
-            # 3. COMPRESSIÓ: Pugem la qualitat al 80% per guanyar definició
-            encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
-            _, buffer = cv2.imencode('.jpg', frame_resized, encode_param)
-            
-            data = buffer.tobytes()
-            
-            # Enviem el paquet si no supera el límit d'UDP
-            if len(data) < 65000:
+        if video:
+            frame = frame_read.frame
+            if frame is not None:
+                
+                # 1. CORRECCIÓ DE COLOR: Convertim de BGR (OpenCV) a RGB (Unity)
+                frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                
+                # 2. MILLORA DE NITIDESA: Pugem a 640x480 fent servir INTER_AREA para evitar que es vegi borrós
+                frame_resized = cv2.resize(frame_rgb, (320, 240), interpolation=cv2.INTER_AREA)
+                
+                # 3. COMPRESSIÓ: Pugem la qualitat al 80% per guanyar definició
+                encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
+                _, buffer = cv2.imencode('.jpg', frame_resized, encode_param)
+                
+                data = buffer.tobytes()
+                
+                # Enviem el paquet si no supera el límit d'UDP
+                if len(data) < 65000:
 
-                #print(data)
-                video_socket.sendto(data, (UNITY_IP, UDP_VIDEO_PORT))
-            else:
-                print("[AVÍS] El frame és massa gran per a un sol paquet UDP, disminueix la qualitat.")
+                    #print(data)
+                    #print(f"ip: {UNITY_IP}")
+                    video_socket.sendto(data, (UNITY_IP, UDP_VIDEO_PORT))
+                else:
+                    print("[AVÍS] El frame és massa gran per a un sol paquet UDP, disminueix la qualitat.")
                 
     except KeyboardInterrupt:
         break

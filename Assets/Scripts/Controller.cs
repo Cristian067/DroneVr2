@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -58,11 +59,15 @@ public class Controller : MonoBehaviour
         
     }
 
+    [ContextMenu("Connect to Tello")]
     public void ConnectToTello()
     {
-        pythonIP = ipInputField.text;
+        //pythonIP = ipInputField.text;
         client = new UdpClient();
         client.Connect(pythonIP, pythonPort);
+
+        SendCommand($"video {GetLocalIPv4()}"); // modo SDK
+
 
         videoTexture = new Texture2D(320, 240, TextureFormat.RGB24, false);
         videoDisplay.texture = videoTexture;
@@ -77,6 +82,11 @@ public class Controller : MonoBehaviour
 
         SendCommand("command"); // modo SDK
 
+    }
+
+    public string GetLocalIPv4()
+    {
+        return Dns.GetHostEntry(Dns.GetHostName()).AddressList.First(f => f.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).ToString();
     }
 
     public void Disconnect()
