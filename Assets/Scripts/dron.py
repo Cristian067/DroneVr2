@@ -2,19 +2,12 @@ import socket
 import threading
 import cv2
 from djitellopy import Tello
-import sys
 
 
-if len(sys.argv) < 2:
-    print("No Ip assigned")
-    exit()
-
-ip = sys.argv[1]
-
-UNITY_IP = ip
+UNITY_IP = ""
 UDP_RECEIVE_PORT = 5005  # Port on Python escolta Unity
 UDP_VIDEO_PORT = 5006    # Port on Python envia el vídeo a Unity
-print(f"Initialized with ip: {ip} \n Port for control: {UDP_RECEIVE_PORT} \n Port for video: {UDP_VIDEO_PORT}")
+#print(f"Initialized with ip: {ip} \n Port for control: {UDP_RECEIVE_PORT} \n Port for video: {UDP_VIDEO_PORT}")
 # --- CONFIGURACIÓ DE XARXA ---
 #UNITY_IP = "192.168.12.222"
 #UDP_RECEIVE_PORT = 5005  # Port on Python escolta Unity
