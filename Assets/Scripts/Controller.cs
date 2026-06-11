@@ -62,7 +62,7 @@ public class Controller : MonoBehaviour
     [ContextMenu("Connect to Tello")]
     public void ConnectToTello()
     {
-        //pythonIP = ipInputField.text;
+        pythonIP = ipInputField.text;
         client = new UdpClient();
         client.Connect(pythonIP, pythonPort);
 

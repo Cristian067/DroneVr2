@@ -25,7 +25,7 @@ tello = Tello()
 tello.connect()
 tello.streamon()
 
-video = True
+video = False
 # Socket per rebre ordres de Unity
 cmd_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 cmd_socket.bind(("0.0.0.0", UDP_RECEIVE_PORT))
@@ -36,6 +36,8 @@ print(f"Battery:{tello.get_battery()}%")
 video_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 def escoltar_unity():
+    global video
+    global UNITY_IP
     """Fil asíncron per processar ordres de control de Unity sense congelar el vídeo"""
     while True:
         try:
@@ -47,6 +49,7 @@ def escoltar_unity():
                 _, ipV = command.split()
                 UNITY_IP = ipV
                 video = True
+                print(f"[UNITY] Configurat per enviar vídeo a: {UNITY_IP} and video: {video}")
                 continue  # No és una comanda de control, només una notificació
             
             # Mapeig d'ordres bàsiques al Tello
@@ -70,6 +73,7 @@ frame_read = tello.get_frame_read()
 while True:
     try:
         if video:
+            print(f"[VIDEO] Enviant vídeo a {UNITY_IP}:{UDP_VIDEO_PORT}")
             frame = frame_read.frame
             if frame is not None:
                 

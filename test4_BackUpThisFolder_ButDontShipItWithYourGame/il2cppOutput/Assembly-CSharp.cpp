@@ -2021,7 +2021,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 122396
+// Method Definition Index: 121754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Start_m6CF9E52A1D22548B67650167CBA335928CEC4796 (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2029,7 +2029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Start_m6CF9E52A1D22548B676501
 		return;
 	}
 }
-// Method Definition Index: 122397
+// Method Definition Index: 121755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_ConnectToTello_m643654386B1C004285D023548A35530842EFF07A (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2046,75 +2046,75 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_ConnectToTello_m643654386B1C0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:64>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:65>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_0 = __this->___ipInputField;
 		NullCheck(L_0);
 		String_t* L_1;
 		L_1 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A_inline(L_0, NULL);
 		__this->___pythonIP = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___pythonIP), (void*)L_1);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:65>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:66>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_2 = (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8*)il2cpp_codegen_object_new(UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8_il2cpp_TypeInfo_var);
 		UdpClient__ctor_m0F676D3E94A3C7B908DE1FBDF08FEB36894F100E(L_2, NULL);
 		__this->___client = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___client), (void*)L_2);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:66>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:67>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_3 = __this->___client;
 		String_t* L_4 = __this->___pythonIP;
 		int32_t L_5 = __this->___pythonPort;
 		NullCheck(L_3);
 		UdpClient_Connect_m73B0512BF055FB87F69A1424A8F5D1C40A062300(L_3, L_4, L_5, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:68>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:69>
 		String_t* L_6;
 		L_6 = Controller_GetLocalIPv4_m770EEE8E32A3D731DA58E266B40798365504A6A9(__this, NULL);
 		String_t* L_7;
 		L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral33D6BBD115D6C2423A071FEF9042CE45D78690C7, L_6, NULL);
 		Controller_SendCommand_mD6C90CDD00968053769CDD685B5FD6E741AE894E(__this, L_7, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:71>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:72>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_8 = (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4*)il2cpp_codegen_object_new(Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
 		Texture2D__ctor_mECF60A9EC0638EC353C02C8E99B6B465D23BE917(L_8, ((int32_t)320), ((int32_t)240), 3, (bool)0, NULL);
 		__this->___videoTexture = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___videoTexture), (void*)L_8);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:72>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:73>
 		RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* L_9 = __this->___videoDisplay;
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_10 = __this->___videoTexture;
 		NullCheck(L_9);
 		RawImage_set_texture_mC016318C95CC17A826D57DD219DBCB6DFD295C02(L_9, L_10, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:75>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:76>
 		int32_t L_11 = __this->___videoPort;
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_12 = (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8*)il2cpp_codegen_object_new(UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8_il2cpp_TypeInfo_var);
 		UdpClient__ctor_m6DCF61B7A404114E51B86974B1B4E028F45C3442(L_12, L_11, NULL);
 		__this->___videoReceiver = L_12;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___videoReceiver), (void*)L_12);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:76>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:77>
 		ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2* L_13 = (ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2*)il2cpp_codegen_object_new(ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2_il2cpp_TypeInfo_var);
 		ThreadStart__ctor_m35CE51F76358F20E4A0C8F2963C3AE14E5FF7E71(L_13, __this, (intptr_t)((void*)Controller_ReceiveVideo_mADDEE8F4D0F7EE4EB620F3CD45896F607038C20E_RuntimeMethod_var), NULL);
 		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_14 = (Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F*)il2cpp_codegen_object_new(Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_il2cpp_TypeInfo_var);
 		Thread__ctor_m1FA23A179DF4F5B659689D6FA40DE903086212E2(L_14, L_13, NULL);
 		__this->___videoThread = L_14;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___videoThread), (void*)L_14);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:77>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:78>
 		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_15 = __this->___videoThread;
 		NullCheck(L_15);
 		Thread_set_IsBackground_m45F00BD4C46F9B8A7C46A20A170B22BABB8FBA30(L_15, (bool)1, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:78>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:79>
 		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_16 = __this->___videoThread;
 		NullCheck(L_16);
 		Thread_Start_m2230799AA331CA9ACEF49D5500281D0C1A9F72FA(L_16, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:80>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:81>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_17 = __this->___connectedIPText;
 		String_t* L_18 = __this->___pythonIP;
 		String_t* L_19;
 		L_19 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral4CC212A87697A9051194C3D082D64C3AC48216EF, L_18, NULL);
 		NullCheck(L_17);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_17, L_19);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:82>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:83>
 		Controller_SendCommand_mD6C90CDD00968053769CDD685B5FD6E741AE894E(__this, _stringLiteralAB39DBCA6267BF7DA87B2FC8557CAF0680ADE7B3, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:84>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:85>
 		return;
 	}
 }
-// Method Definition Index: 122398
+// Method Definition Index: 121756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Controller_GetLocalIPv4_m770EEE8E32A3D731DA58E266B40798365504A6A9 (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2131,9 +2131,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Controller_GetLocalIPv4_m770EEE8E32
 	Func_2_tFA844D31ADF3BDA44BBBC18FC85A73BF36532611* G_B1_0 = NULL;
 	IPAddressU5BU5D_t3AEDF3B94746C9023A4549F878AA47F702C9CD0D* G_B1_1 = NULL;
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:88>
 		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:89>
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:90>
 		String_t* L_0;
 		L_0 = Dns_GetHostName_m9290C5F9D0B6B8F259D53F30B7A80C4D4FB77083(NULL);
 		IPHostEntry_tAAAEB0F40DB9F28BE601B5FE7DA1D76191C94490* L_1;
@@ -2175,7 +2173,7 @@ IL_002e:
 		return L_9;
 	}
 }
-// Method Definition Index: 122399
+// Method Definition Index: 121757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Disconnect_m13A142B1D072E4CBD6EC699398E87B0AC3DC4DF0 (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2185,11 +2183,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Disconnect_m13A142B1D072E4CBD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:95>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:94>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_0 = __this->___client;
 		NullCheck(L_0);
 		UdpClient_Close_m5441019910E37A7F7B8610A46769004E614FF5B6(L_0, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:96>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:95>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_1 = __this->___videoReceiver;
 		if (!L_1)
 		{
@@ -2197,7 +2195,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Disconnect_m13A142B1D072E4CBD
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:96>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:95>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_2 = __this->___videoReceiver;
 		NullCheck(L_2);
 		UdpClient_Close_m5441019910E37A7F7B8610A46769004E614FF5B6(L_2, NULL);
@@ -2205,7 +2203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Disconnect_m13A142B1D072E4CBD
 
 IL_001e:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:97>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:96>
 		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_3 = __this->___videoThread;
 		if (!L_3)
 		{
@@ -2223,7 +2221,7 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:97>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:96>
 		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_6 = __this->___videoThread;
 		NullCheck(L_6);
 		Thread_Abort_mB956BACF405EFC38C6A3D0B93142E4CEDD64D941(L_6, NULL);
@@ -2231,15 +2229,15 @@ IL_001e:
 
 IL_003e:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:98>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:97>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_7 = __this->___connectedIPText;
 		NullCheck(L_7);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_7, _stringLiteral15ABA1A04898BEFC8B3C8918C10803CACA669ECD);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:100>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:99>
 		return;
 	}
 }
-// Method Definition Index: 122400
+// Method Definition Index: 121758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_ReceiveVideo_mADDEE8F4D0F7EE4EB620F3CD45896F607038C20E (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2256,7 +2254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_ReceiveVideo_mADDEE8F4D0F7EE4
 	Exception_t* V_4 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:104>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:103>
 		il2cpp_codegen_runtime_class_init_inline(IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var);
 		IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* L_0 = ((IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_StaticFields*)il2cpp_codegen_static_fields_for(IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var))->___Any;
 		int32_t L_1 = __this->___videoPort;
@@ -2271,13 +2269,13 @@ IL_0011:
 	try
 	{
 		{
-			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:109>
+			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:108>
 			UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_3 = __this->___videoReceiver;
 			NullCheck(L_3);
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4;
 			L_4 = UdpClient_Receive_mC682A8DE6CD86CEFA3CE52852574FD3437EC7DA9(L_3, (&V_0), NULL);
 			V_1 = L_4;
-			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:110>
+			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:109>
 			RuntimeObject* L_5 = __this->___lockObject;
 			V_2 = L_5;
 			V_3 = (bool)0;
@@ -2310,13 +2308,13 @@ IL_004a_1:
 			{
 				RuntimeObject* L_8 = V_2;
 				Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_8, (&V_3), NULL);
-				//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:112>
+				//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:111>
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = V_1;
 				__this->___latestFrameBytes = L_9;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___latestFrameBytes), (void*)L_9);
-				//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:113>
+				//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:112>
 				__this->___frameReceived = (bool)1;
-				//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:114>
+				//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:113>
 				goto IL_004b_1;
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -2327,7 +2325,7 @@ IL_004a_1:
 
 IL_004b_1:
 		{
-			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:115>
+			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:114>
 			goto IL_0011;
 		}
 	}
@@ -2344,9 +2342,9 @@ IL_004b_1:
 CATCH_004d:
 	{
 		Exception_t* L_10 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:116>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:115>
 		V_4 = L_10;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:118>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:117>
 		Exception_t* L_11 = V_4;
 		NullCheck(L_11);
 		String_t* L_12;
@@ -2355,12 +2353,12 @@ CATCH_004d:
 		L_13 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral278D374FB89533ACB4E3DD62C36DC024186274E5)), L_12, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_13, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:119>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:118>
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_0011;
 	}
 }
-// Method Definition Index: 122401
+// Method Definition Index: 121759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Update_mDE8E185DE18C109FA2E8C6FCBFEB86F100F21634 (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2384,48 +2382,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Update_mDE8E185DE18C109FA2E8C
 	RuntimeObject* V_6 = NULL;
 	bool V_7 = false;
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:125>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:124>
 		il2cpp_codegen_runtime_class_init_inline(OVRInput_t759D9CC8F14D8539AD78A0375A2306C39D77100A_il2cpp_TypeInfo_var);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0;
 		L_0 = OVRInput_Get_mF4EA350D5898449529C641C72B7D440DF81180C8(1, ((int32_t)-2147483648LL), NULL);
 		__this->___leftAxis = L_0;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:126>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:125>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
 		L_1 = OVRInput_Get_mF4EA350D5898449529C641C72B7D440DF81180C8(2, ((int32_t)-2147483648LL), NULL);
 		__this->___rightAxis = L_1;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:128>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:127>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_2 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___leftAxis);
 		float L_3 = L_2->___x;
 		V_0 = L_3;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:129>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:128>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_4 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___leftAxis);
 		float L_5 = L_4->___y;
 		V_1 = L_5;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:130>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:129>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_6 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___rightAxis);
 		float L_7 = L_6->___x;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:131>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:130>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_8 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___rightAxis);
 		float L_9 = L_8->___y;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:136>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:135>
 		float L_10 = V_0;
 		int32_t L_11;
 		L_11 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)il2cpp_codegen_multiply(L_10, (100.0f))), NULL);
 		V_2 = L_11;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:137>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:136>
 		float L_12 = V_1;
 		int32_t L_13;
 		L_13 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)il2cpp_codegen_multiply(L_12, (100.0f))), NULL);
 		V_3 = L_13;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:138>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:137>
 		int32_t L_14;
 		L_14 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)il2cpp_codegen_multiply(L_9, (100.0f))), NULL);
 		V_4 = L_14;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:139>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:138>
 		int32_t L_15;
 		L_15 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)il2cpp_codegen_multiply(L_7, (100.0f))), NULL);
 		V_5 = L_15;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:141>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:140>
 		bool L_16 = __this->___isFlying;
 		if (!L_16)
 		{
@@ -2433,7 +2431,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Update_mDE8E185DE18C109FA2E8C
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:143>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:142>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_17 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_18 = L_17;
 		int32_t L_19 = V_2;
@@ -2470,7 +2468,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_Update_mDE8E185DE18C109FA2E8C
 
 IL_00c8:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:146>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:145>
 		il2cpp_codegen_runtime_class_init_inline(OVRInput_t759D9CC8F14D8539AD78A0375A2306C39D77100A_il2cpp_TypeInfo_var);
 		bool L_35;
 		L_35 = OVRInput_GetDown_mEC4F71AEC93D3AF1A041934CA4C61680C6DB9AC7(1, ((int32_t)-2147483648LL), NULL);
@@ -2480,18 +2478,18 @@ IL_00c8:
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:148>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:147>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralAA1C9844E05E1CAE34334F595FCB0B0538A851DC, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:149>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:148>
 		Controller_SendCommand_mD6C90CDD00968053769CDD685B5FD6E741AE894E(__this, _stringLiteral5E015DA31819C77B0FC26414809E269DC42795F2, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:150>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:149>
 		__this->___isFlying = (bool)1;
 	}
 
 IL_00f1:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:153>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:152>
 		il2cpp_codegen_runtime_class_init_inline(OVRInput_t759D9CC8F14D8539AD78A0375A2306C39D77100A_il2cpp_TypeInfo_var);
 		bool L_36;
 		L_36 = OVRInput_GetDown_mEC4F71AEC93D3AF1A041934CA4C61680C6DB9AC7(2, ((int32_t)-2147483648LL), NULL);
@@ -2501,15 +2499,15 @@ IL_00f1:
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:155>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:154>
 		Controller_SendCommand_mD6C90CDD00968053769CDD685B5FD6E741AE894E(__this, _stringLiteral99654BA65919C1D4F705ADE00AD912C711685A9F, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:156>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:155>
 		__this->___isFlying = (bool)0;
 	}
 
 IL_0110:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:160>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:159>
 		bool L_37 = __this->___frameReceived;
 		if (!L_37)
 		{
@@ -2517,7 +2515,7 @@ IL_0110:
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:162>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:161>
 		RuntimeObject* L_38 = __this->___lockObject;
 		V_6 = L_38;
 		V_7 = (bool)0;
@@ -2550,18 +2548,18 @@ IL_015d:
 		{
 			RuntimeObject* L_41 = V_6;
 			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_41, (&V_7), NULL);
-			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:164>
+			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:163>
 			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_42 = __this->___videoTexture;
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_43 = __this->___latestFrameBytes;
 			bool L_44;
 			L_44 = ImageConversion_LoadImage_m1797365F78319B68638DE8BB02836F8D60760041(L_42, L_43, NULL);
-			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:165>
+			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:164>
 			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_45 = __this->___videoTexture;
 			NullCheck(L_45);
 			Texture2D_Apply_mA014182C9EE0BBF6EEE3B286854F29E50EB972DC(L_45, NULL);
-			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:166>
+			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:165>
 			__this->___frameReceived = (bool)0;
-			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:167>
+			//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:166>
 			goto IL_015e;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -2572,11 +2570,11 @@ IL_015d:
 
 IL_015e:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:169>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:168>
 		return;
 	}
 }
-// Method Definition Index: 122402
+// Method Definition Index: 121760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_SendCommand_mD6C90CDD00968053769CDD685B5FD6E741AE894E (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, String_t* ___0_command, const RuntimeMethod* method) 
 {
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_0 = NULL;
@@ -2584,7 +2582,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_SendCommand_mD6C90CDD00968053
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	try
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:175>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:174>
 		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_0;
 		L_0 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 		String_t* L_1 = ___0_command;
@@ -2592,7 +2590,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_SendCommand_mD6C90CDD00968053
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2;
 		L_2 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_0, L_1);
 		V_0 = L_2;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:176>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:175>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_3 = __this->___client;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = V_0;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5 = V_0;
@@ -2600,7 +2598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_SendCommand_mD6C90CDD00968053
 		NullCheck(L_3);
 		int32_t L_6;
 		L_6 = UdpClient_Send_mF0E2DCA4FF68290820E807BB5794E938E46280B4(L_3, L_4, ((int32_t)(((RuntimeArray*)L_5)->max_length)), NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:177>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:176>
 		goto IL_0036;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -2616,9 +2614,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_SendCommand_mD6C90CDD00968053
 CATCH_001e:
 	{
 		Exception_t* L_7 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:178>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:177>
 		V_1 = L_7;
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:180>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:179>
 		Exception_t* L_8 = V_1;
 		NullCheck(L_8);
 		String_t* L_9;
@@ -2627,22 +2625,22 @@ CATCH_001e:
 		L_10 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral5FF34E4054D5322112B0A9AFD98DB0F999508206)), L_9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_10, NULL);
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:181>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:180>
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_0036;
 	}
 
 IL_0036:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:182>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:181>
 		return;
 	}
 }
-// Method Definition Index: 122403
+// Method Definition Index: 121761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_OnApplicationQuit_mBD6BD936D7E54DF3B5BF459C1846F6716BB1154A (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:188>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:187>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_0 = __this->___client;
 		if (!L_0)
 		{
@@ -2650,7 +2648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_OnApplicationQuit_mBD6BD936D7
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:188>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:187>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_1 = __this->___client;
 		NullCheck(L_1);
 		UdpClient_Close_m5441019910E37A7F7B8610A46769004E614FF5B6(L_1, NULL);
@@ -2658,7 +2656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_OnApplicationQuit_mBD6BD936D7
 
 IL_0013:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:189>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:188>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_2 = __this->___videoReceiver;
 		if (!L_2)
 		{
@@ -2666,7 +2664,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:189>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:188>
 		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_3 = __this->___videoReceiver;
 		NullCheck(L_3);
 		UdpClient_Close_m5441019910E37A7F7B8610A46769004E614FF5B6(L_3, NULL);
@@ -2674,7 +2672,7 @@ IL_0013:
 
 IL_0026:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:190>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:189>
 		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_4 = __this->___videoThread;
 		if (!L_4)
 		{
@@ -2692,7 +2690,7 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:190>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:189>
 		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_7 = __this->___videoThread;
 		NullCheck(L_7);
 		Thread_Abort_mB956BACF405EFC38C6A3D0B93142E4CEDD64D941(L_7, NULL);
@@ -2700,11 +2698,11 @@ IL_0026:
 
 IL_0046:
 	{
-		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:191>
+		//<source_info:C:/Users/EVRV/Documents/Unity/DroneVr2/Assets/Scripts/Controller.cs:190>
 		return;
 	}
 }
-// Method Definition Index: 122404
+// Method Definition Index: 121762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller__ctor_mD8A105DFD9CAFDD0B419A5ECD5BC3B789338476A (Controller_t080F3A02FE42D755CC6A8B605F85CA157ED61BB9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2753,7 +2751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller__ctor_mD8A105DFD9CAFDD0B419A5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 122405
+// Method Definition Index: 121763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m068081C6C9B2C5E2E39E2E0BC38E06CA2A8C3D08 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2770,7 +2768,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m068081C6C9B2C5E2E39E2E0B
 		return;
 	}
 }
-// Method Definition Index: 122406
+// Method Definition Index: 121764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m6511CC08FA7D8B3659017547ECAFF05D69CA2BE6 (U3CU3Ec_tAED9C6D4075550BFCEFA2B83138C2EA7F725C1C4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2778,7 +2776,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m6511CC08FA7D8B3659017547E
 		return;
 	}
 }
-// Method Definition Index: 122407
+// Method Definition Index: 121765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CGetLocalIPv4U3Eb__24_0_mFC00895EF1A4B89746819CF6DB85E1521876BDE5 (U3CU3Ec_tAED9C6D4075550BFCEFA2B83138C2EA7F725C1C4* __this, IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___0_f, const RuntimeMethod* method) 
 {
 	{
@@ -2798,7 +2796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CGetLocalIPv4U3Eb__24_0_mFC008
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 122408
+// Method Definition Index: 121766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2814,7 +2812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A90
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 122409
+// Method Definition Index: 121767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2830,7 +2828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 122410
+// Method Definition Index: 121768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2864,7 +2862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		return L_6;
 	}
 }
-// Method Definition Index: 122411
+// Method Definition Index: 121769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2969,7 +2967,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_ma
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 91593
+// Method Definition Index: 91548
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A_inline (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2978,7 +2976,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text
 		return L_0;
 	}
 }
-// Method Definition Index: 68901
+// Method Definition Index: 68856
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR IPAddressU5BU5D_t3AEDF3B94746C9023A4549F878AA47F702C9CD0D* IPHostEntry_get_AddressList_m9D14D52EFB41C53C9C4A36D438E1333A99B7AA71_inline (IPHostEntry_tAAAEB0F40DB9F28BE601B5FE7DA1D76191C94490* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2986,7 +2984,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR IPAddressU5BU5D_t3AEDF3B94746C902
 		return L_0;
 	}
 }
-// Method Definition Index: 59304
+// Method Definition Index: 59280
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
