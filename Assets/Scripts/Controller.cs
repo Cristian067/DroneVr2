@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,10 @@ public class Controller : MonoBehaviour
 
     [Header("UI Elements")]
     public RawImage videoDisplay;
+
+    public TMP_InputField ipInputField;
+
+    public TextMeshProUGUI connectedIPText;
 
     [Header("Network Settings")]
     public string pythonIP = "192.168.12.222";
@@ -47,9 +52,17 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
+        
+
+
+        
+    }
+
+    public void ConnectToTello()
+    {
+        pythonIP = ipInputField.text;
         client = new UdpClient();
         client.Connect(pythonIP, pythonPort);
-
 
         videoTexture = new Texture2D(320, 240, TextureFormat.RGB24, false);
         videoDisplay.texture = videoTexture;
@@ -60,7 +73,19 @@ public class Controller : MonoBehaviour
         videoThread.IsBackground = true;
         videoThread.Start();
 
+        connectedIPText.text = $"Connected to: {pythonIP}";
+
         SendCommand("command"); // modo SDK
+
+    }
+
+    public void Disconnect()
+    {
+        client.Close();
+        if (videoReceiver != null) videoReceiver.Close();
+        if (videoThread != null && videoThread.IsAlive) videoThread.Abort();
+        connectedIPText.text = $"Disconnected";
+
     }
 
     private void ReceiveVideo()
